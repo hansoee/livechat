@@ -47,6 +47,14 @@ function loginForm(){
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+    <!--n-->
+    <div class="screen">
+    <div id="isi_chat"></div>
+    <div class="screen">
+    <img src="livechat/chat.png" width="60" id="kkx" onmousemove="tangan(this.id)"
+    onclick="s_chat('isi_chat')" />
+    </div>
+</div>
     <?php
     if(!isset($_SESSION['name'])){
         loginForm();
