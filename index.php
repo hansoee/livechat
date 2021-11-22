@@ -111,6 +111,36 @@ function loginForm(){
                     }
                 });
             });
+		function tangan(id){
+			document.getElementById(id).style.cursor="pointer";
+		}
+
+
+	function s_chat(id){
+            if (document.getElementById("kkx").src == window.location.href+"livechat/chat.png"){
+                document.getElementById("kkx").src = "livechat/close.png";
+                document.getElementById("kkx").style.width = "30px";
+                document.getElementById("isi_chat").className = "livec";
+                var substack = document.createElement("iframe");
+                substack.src = window.location.href+"livechat/index.php";
+                substack.width = "300";
+                substack.height = "390";
+                substack.frameBorder ="0";
+                substack.style.borderRadius = "10px";
+                substack.scrolling = "0";
+                substack.style.border= "none";
+                substack.style.background = "white";
+                document.getElementById(id).appendChild(substack);
+                
+            }else {
+                document.getElementById("kkx").src = "livechat/chat.png";
+                document.getElementById("kkx").style.width = "60px";
+                document.getElementById("isi_chat").className = "oflivec";
+                document.getElementById("isi_chat").innerHTML = "";
+
+            }
+            
+        }
         </script>
     </body>
 </html>
